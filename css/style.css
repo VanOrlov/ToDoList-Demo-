@@ -41,25 +41,85 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.wrapper{
+
+
+.wrapper {
     display: flex;
+    min-height: 100%;
     justify-content: center;
     align-items: center;
-    min-height: 100%;
+}
+.container {
+    width: 500px;
+    height: 700px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(206, 251, 243);
+    overflow: hidden;
+}
+.input-container {
+    display: flex;
+    padding: 10px;
+    margin: 100px 0 0 0;
+}
+.input-todo {
+    width: 250px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0 25px 0 0px;
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: repeat(10, 70px);
-    grid-template-rows: repeat(5, 70px);
-    background-image: url(../img/15898800665ec3a502c18188.67788568-904.jpg);
-    background-size: cover;
+.addToDo {
+    width: auto;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 10px;
+    transition: 0.1s;
 }
 
-.container div{
-    border: 35px solid #fff;
+.addToDo:active{
+    background-color: red;
+    color: white
 }
 
-.container div::before{
-    border: 10px solid #fff
+.toDoList {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    width: auto;
+    margin: 10px;
+    background-color: rgba(188, 220, 252, 0.245);
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 400px
+}
+.toDoList li{
+    text-align: center;
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid rgb(132, 132, 255);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    word-break:break-all;
+    line-height: 22px;
+    background-color: rgb(247, 221, 221);
+}
+
+.toDoList li:last-child{
+    margin-bottom: 0;
 }
